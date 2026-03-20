@@ -1,13 +1,13 @@
 
-package com.mycompany.cinicalhospital;
+package models;
 
 
-public class persona {
+public class Persona {
     private String nombre;
     private String cedula;
     private int edad;
 
-    public persona(String nombre, String cedula, int edad) {
+    public Persona(String nombre, String cedula, int edad) {
         this.nombre = nombre;
         this.cedula = cedula;
         this.edad = edad;

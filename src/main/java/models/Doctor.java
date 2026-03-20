@@ -1,11 +1,12 @@
 
-package com.mycompany.cinicalhospital;
+package models;
 
-public class Doctor {
+public class Doctor extends Persona{
    private String especialidad;
    private String tarjetaProfecional;
 
-    public Doctor(String especialidad, String tarjetaProfecional) {
+    public Doctor (String nombre, int edad, String cedula, String especialidad, String tarjetaProfecional) {
+        super(nombre,edad,cedula);
         this.especialidad = especialidad;
         this.tarjetaProfecional = tarjetaProfecional;
     }
@@ -24,6 +25,11 @@ public class Doctor {
 
     public void setTarjetaProfecional(String tarjetaProfecional) {
         this.tarjetaProfecional = tarjetaProfecional;
+    }
+
+    @Override
+    public String toString() {
+        return "Doctor{" + "especialidad=" + especialidad + ", tarjetaProfecional=" + tarjetaProfecional + '}';
     }
    
 }
