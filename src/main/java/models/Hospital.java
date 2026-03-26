@@ -14,7 +14,13 @@ public class Hospital {
         this.consultas = consultas;
     }
 
-    public void registraConsulta(Consulta c){
+    public Hospital(String nombre, String ciudad) {
+        this.nombre = nombre;
+        this.ciudad = ciudad;
+    }
+    
+
+    public void registrarConsulta(Consulta c){
         consultas.add(c);
         System.out.println("Consulta registrada: " + c.getFecha());
     }
@@ -35,7 +41,7 @@ public class Hospital {
         this.ciudad = ciudad;
     }
 
-    public ArrayList<Consulta> getConsultas(int i) {
+    public ArrayList<Consulta> getConsulta() {
         return consultas;
     }
 

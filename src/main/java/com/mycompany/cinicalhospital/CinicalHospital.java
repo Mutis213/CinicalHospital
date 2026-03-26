@@ -2,7 +2,7 @@ package com.mycompany.cinicalhospital;
 
 import models.Consulta;
 import models.Hospital;
-import models.Medico;
+import models.Doctor;
 
 public class CinicalHospital {
 
@@ -11,8 +11,8 @@ public class CinicalHospital {
         System.out.println("1. CREANDO HOSPITAL:");
         System.out.println("-".repeat(50));
         Hospital hospital = new Hospital("Clínica Santa María", "Bogotá");
-        System.out.println("✓ Hospital creado: " + hospital.getNombre());
-        System.out.println("✓ Ciudad: " + hospital.getCiudad());
+        System.out.println(" Hospital creado: " + hospital.getNombre());
+        System.out.println(" Ciudad: " + hospital.getCiudad());
         System.out.println();
 
         System.out.println("2. REGISTRANDO CONSULTAS:");
@@ -36,44 +36,44 @@ public class CinicalHospital {
         System.out.println("3. CREANDO MÉDICOS:");
         System.out.println("-".repeat(50));
         
-        Medico medico1 = new Medico(
+        Doctor doctor1 = new Doctor(
             "Dr. Juan Carlos Rodríguez", 
-            45, 
-            "1234567890", 
-            "3015678901",
+            "1234567890",
+            41,             
+            301567890,
             "Neurología", 
             "MN-2020-45678",
             101
         );
 
-        Medico medico2 = new Medico(
+        Doctor doctor2 = new Doctor(
             "Dra. María Fernanda López", 
+            "9876543210",
             38, 
-            "9876543210", 
-            "3109876543",
+            310987654,
             "Cardiología", 
             "MN-2019-23456",
             202
         );
 
         System.out.println("Médico 1 Creado:");
-        System.out.println("  • Nombre: " + medico1.getNombre());
-        System.out.println("  • Edad: " + medico1.getEdad());
-        System.out.println("  • Cédula: " + medico1.getCedula());
-        System.out.println("  • Teléfono: " + medico1.getTelefono() + " (NUEVO)");
-        System.out.println("  • Especialidad: " + medico1.getEspecialidad());
-        System.out.println("  • Tarjeta Profesional: " + medico1.getTarjetaProfesional());
-        System.out.println("  • Consultorio: " + medico1.getConsultorio() + " (NUEVO)");
+        System.out.println("  • Nombre: " + doctor1.getNombre());
+        System.out.println("  • Edad: " + doctor1.getEdad());
+        System.out.println("  • Cédula: " + doctor1.getCedula());
+        System.out.println("  • Teléfono: " + doctor1.getTelefono() + " (NUEVO)");
+        System.out.println("  • Especialidad: " + doctor1.getEspecialidad());
+        System.out.println("  • Tarjeta Profesional: " + doctor1.getTarjetaProfecional());
+        System.out.println("  • Consultorio: " + doctor1.getConsultorio() + " (NUEVO)");
         System.out.println("  ✓ Datos de Persona inicializados correctamente con super()");
 
         System.out.println("\nMédico 2 Creado:");
-        System.out.println("  • Nombre: " + medico2.getNombre());
-        System.out.println("  • Edad: " + medico2.getEdad());
-        System.out.println("  • Cédula: " + medico2.getCedula());
-        System.out.println("  • Teléfono: " + medico2.getTelefono() + " (NUEVO)");
-        System.out.println("  • Especialidad: " + medico2.getEspecialidad());
-        System.out.println("  • Tarjeta Profesional: " + medico2.getTarjetaProfesional());
-        System.out.println("  • Consultorio: " + medico2.getConsultorio() + " (NUEVO)");
+        System.out.println("  • Nombre: " + doctor2.getNombre());
+        System.out.println("  • Edad: " + doctor2.getEdad());
+        System.out.println("  • Cédula: " + doctor2.getCedula());
+        System.out.println("  • Teléfono: " + doctor2.getTelefono() + " (NUEVO)");
+        System.out.println("  • Especialidad: " + doctor2.getEspecialidad());
+        System.out.println("  • Tarjeta Profesional: " + doctor2.getTarjetaProfecional());
+        System.out.println("  • Consultorio: " + doctor2.getConsultorio() + " (NUEVO)");
         System.out.println("  ✓ Datos de Persona inicializados correctamente con super()");
         System.out.println();
 
@@ -82,15 +82,15 @@ public class CinicalHospital {
         System.out.println("-".repeat(50));
 
         System.out.println("\nAtención Médica 1:");
-        medico1.atender(consulta1);
+        doctor1.atender(consulta1);
         System.out.println("   → Duración: " + consulta1.getDuracionMinutos() + " minutos");
 
         System.out.println("\nAtención Médica 2:");
-        medico1.atender(consulta2);
+        doctor1.atender(consulta2);
         System.out.println("   → Duración: " + consulta2.getDuracionMinutos() + " minutos");
 
         System.out.println("\nAtención Médica 3:");
-        medico2.atender(consulta3);
+        doctor2.atender(consulta3);
         System.out.println("   → Duración: " + consulta3.getDuracionMinutos() + " minutos");
         System.out.println();
 
@@ -99,16 +99,16 @@ public class CinicalHospital {
         System.out.println("-".repeat(50));
 
         System.out.println("\nModificando consultorio del Médico 1:");
-        medico1.setConsultorio(105);
-        System.out.println("  • Nuevo consultorio: " + medico1.getConsultorio());
+        doctor1.setConsultorio(105);
+        System.out.println("  • Nuevo consultorio: " + doctor1.getConsultorio());
 
         System.out.println("\nModificando duración de la Consulta 1:");
         consulta1.setDuracionMinutos(40);
         System.out.println("  • Nueva duración: " + consulta1.getDuracionMinutos() + " minutos");
 
         System.out.println("\nModificando teléfono del Médico 2:");
-        medico2.setTelefono("3201234567");
-        System.out.println("  • Nuevo teléfono: " + medico2.getTelefono());
+        doctor2.setTelefono(320123456);
+        System.out.println("  • Nuevo teléfono: " + doctor2.getTelefono());
         System.out.println();
 
         System.out.println("6. RESUMEN FINAL DEL SISTEMA:");
@@ -116,12 +116,12 @@ public class CinicalHospital {
         System.out.println("\n" + hospital.toString());
         
         System.out.println("\nMédicos registrados:");
-        System.out.println("  • " + medico1.toString());
-        System.out.println("  • " + medico2.toString());
+        System.out.println("  • " + doctor1.toString());
+        System.out.println("  • " + doctor2.toString());
         
         System.out.println("\nConsultas en el hospital:");
-        for (int i = 0; i < hospital.getConsultas().size(); i++) {
-            System.out.println("  " + (i + 1) + ". " + hospital.getConsultas().get(i).toString());
+        for (int i = 0; i < hospital.getConsulta().size(); i++) {
+            System.out.println("  " + (i + 1) + ". " + hospital.getConsulta().get(i).toString());
         }
 
         System.out.println("\n===== ESTADÍSTICAS FINALES =====");
