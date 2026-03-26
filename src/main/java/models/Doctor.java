@@ -6,7 +6,7 @@ public class Doctor extends Persona{
    private String tarjetaProfecional;
 
     public Doctor (String nombre, int edad, String cedula, String especialidad, String tarjetaProfecional) {
-        super(nombre,edad,cedula);
+        super(nombre,cedula,edad);
         this.especialidad = especialidad;
         this.tarjetaProfecional = tarjetaProfecional;
     }
@@ -32,4 +32,7 @@ public class Doctor extends Persona{
         return "Doctor{" + "especialidad=" + especialidad + ", tarjetaProfecional=" + tarjetaProfecional + '}';
     }
    
+    public void atender(Consulta c) {
+        System.out.println(this.getNombre() + " está atendiendo la consulta de " + c.getMotivo());
+    }
 }
