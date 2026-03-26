@@ -30,7 +30,7 @@ public class CinicalHospital {
         System.out.println("  • " + consulta1.toString());
         System.out.println("  • " + consulta2.toString());
         System.out.println("  • " + consulta3.toString());
-        System.out.println("\n✓ Total de consultas en el hospital: " + hospital.getConsulta());
+        System.out.println("\n Total de consultas en el hospital: " + hospital.getConsulta());
         System.out.println();
 
         System.out.println("3. CREANDO MÉDICOS:");
@@ -64,7 +64,7 @@ public class CinicalHospital {
         System.out.println("  • Especialidad: " + doctor1.getEspecialidad());
         System.out.println("  • Tarjeta Profesional: " + doctor1.getTarjetaProfecional());
         System.out.println("  • Consultorio: " + doctor1.getConsultorio() + " (NUEVO)");
-        System.out.println("  ✓ Datos de Persona inicializados correctamente con super()");
+        System.out.println("   Datos de Persona inicializados correctamente con super()");
 
         System.out.println("\nMédico 2 Creado:");
         System.out.println("  • Nombre: " + doctor2.getNombre());
@@ -74,7 +74,7 @@ public class CinicalHospital {
         System.out.println("  • Especialidad: " + doctor2.getEspecialidad());
         System.out.println("  • Tarjeta Profesional: " + doctor2.getTarjetaProfecional());
         System.out.println("  • Consultorio: " + doctor2.getConsultorio() + " (NUEVO)");
-        System.out.println("  ✓ Datos de Persona inicializados correctamente con super()");
+        System.out.println("   Datos de Persona inicializados correctamente con super()");
         System.out.println();
 
         // 4. MÉDICOS ATENDIENDO CONSULTAS (Demostrando DEPENDENCIA)
@@ -83,7 +83,7 @@ public class CinicalHospital {
 
         System.out.println("\nAtención Médica 1:");
         doctor1.atender(consulta1);
-        System.out.println("   → Duración: " + consulta1.getDuracionMinutos() + " minutos");
+        System.out.println("   > Duración: " + consulta1.getDuracionMinutos() + " minutos");
 
         System.out.println("\nAtención Médica 2:");
         doctor1.atender(consulta2);
