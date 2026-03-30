@@ -129,7 +129,6 @@ public class CinicalHospital {
         System.out.println("Total de consultas: " + hospital.getConsulta());
         System.out.println("Duración total de consultas: " + (consulta1.getDuracionMinutos() + consulta2.getDuracionMinutos() + consulta3.getDuracionMinutos()) + " minutos");
 
-        System.out.println("\n===== FIN DE LA DEMOSTRACIÓN =====");
 
     }
 }
