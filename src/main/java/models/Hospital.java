@@ -8,18 +8,12 @@ public class Hospital {
         private String ciudad;
         private ArrayList<Consulta> consultas;
 
-    public Hospital(String nombre, String ciudad, ArrayList<Consulta> consultas) {
-        this.nombre = nombre;
-        this.ciudad = ciudad;
-        this.consultas = consultas;
-    }
-
     public Hospital(String nombre, String ciudad) {
         this.nombre = nombre;
         this.ciudad = ciudad;
+        this.consultas = new ArrayList<>();
     }
     
-
     public void registrarConsulta(Consulta c){
         consultas.add(c);
         System.out.println("Consulta registrada: " + c.getFecha());
